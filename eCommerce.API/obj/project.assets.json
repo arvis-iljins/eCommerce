@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "eCommerce.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/eCommerce.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eCommerce.Core.dll": {}
+        }
+      },
       "eCommerce.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "eCommerce.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/eCommerce.Infrastructure.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "eCommerce.Core/1.0.0": {
+      "type": "project",
+      "path": "../eCommerce.Core/eCommerce.Core.csproj",
+      "msbuildProject": "../eCommerce.Core/eCommerce.Core.csproj"
+    },
     "eCommerce.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../eCommerce.Infrastructure/eCommerce.Infrastructure.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "eCommerce.Core >= 1.0.0",
       "eCommerce.Infrastructure >= 1.0.0"
     ]
   },
@@ -51,6 +70,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "/Users/arvisiljins/Desktop/eCommerce/eCommerce.Core/eCommerce.Core.csproj": {
+              "projectPath": "/Users/arvisiljins/Desktop/eCommerce/eCommerce.Core/eCommerce.Core.csproj"
+            },
             "/Users/arvisiljins/Desktop/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj": {
               "projectPath": "/Users/arvisiljins/Desktop/eCommerce/eCommerce.Infrastructure/eCommerce.Infrastructure.csproj"
             }
