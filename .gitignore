@@ -1,0 +1,20 @@
+*.lscache
+*.cache
+bin/
+obj/
+.vs/
+*.user
+/testresults
+dotnet-tools.json
+# Logs
+*.log
+logs/
+nlog*.log
+/node_modules
+/build-*
+/buildClient-*
+/buildServer-*
+/.idea
+/.vscode
+/.vs
+*.lscache
