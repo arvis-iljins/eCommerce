@@ -55,6 +55,16 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 /warnaserror+:NU1605,SYSLIB0011
 
 [sourceFiles]
+eCommerce.Core/obj/Debug/net10.0/
+ .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+ eCommerce.Core.AssemblyInfo.cs
+ eCommerce.Core.GlobalUsings.g.cs
+eCommerce.Infrastructure/
+ Class1.cs
+ obj/Debug/net10.0/
+  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+  eCommerce.Infrastructure.AssemblyInfo.cs
+  eCommerce.Infrastructure.GlobalUsings.g.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  eCommerce.API.AssemblyInfo.cs
@@ -371,6 +381,9 @@ Program.cs
  System.Xml.XPath.dll
  System.Xml.XPath.XDocument.dll
  WindowsBase.dll
+../
+ eCommerce.Core/obj/Debug/net10.0/ref/eCommerce.Core.dll
+ eCommerce.Infrastructure/obj/Debug/net10.0/ref/eCommerce.Infrastructure.dll
 
 [analyzerReferences]
 ../../../../../usr/local/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/10.0.2/analyzers/dotnet/cs/
