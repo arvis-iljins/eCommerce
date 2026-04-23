@@ -1,6 +1,6 @@
 using eCommerce.Core.Entities;
 using eCommerce.Core.Enums;
-using eCommerce.Core.RepositoryContracts.UserRepository;
+using eCommerce.Core.RepositoryContracts;
 
 namespace eCommerce.Infrastructure.Repositories
 {

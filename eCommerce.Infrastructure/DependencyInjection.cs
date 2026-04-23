@@ -1,4 +1,4 @@
-using eCommerce.Core.RepositoryContracts.UserRepository;
+using eCommerce.Core.RepositoryContracts;
 using eCommerce.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
