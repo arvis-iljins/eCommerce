@@ -1,3 +1,5 @@
+using eCommerce.Core.RepositoryContracts.UserRepository;
+using eCommerce.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace eCommerce.Infrastructure;
@@ -10,6 +12,7 @@ public static class DependencyInjection
     /// <returns>The updated service collection.</returns>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 }
