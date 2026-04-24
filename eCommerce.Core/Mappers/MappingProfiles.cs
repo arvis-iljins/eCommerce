@@ -8,8 +8,14 @@ namespace eCommerce.Core.Mappers
     {
         public MappingProfiles()
         {
-            CreateMap<ApplicationUser, AuthenticationResponse>();
-            CreateMap<RegisterRequest, ApplicationUser>();
+            CreateMap<ApplicationUser, AuthenticationResponse>()
+                .ForCtorParam("UserId", opt => opt.MapFrom(src => src.Id))
+                .ForCtorParam("Token", opt => opt.MapFrom(src => (string?)null))
+                .ForCtorParam("Success", opt => opt.MapFrom(src => true));
+
+            CreateMap<RegisterRequest, ApplicationUser>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender.ToString()));
         }
     }
 }
