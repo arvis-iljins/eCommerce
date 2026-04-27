@@ -3,6 +3,7 @@ using eCommerce.API.Middlewares;
 using eCommerce.Core;
 using eCommerce.Core.Mappers;
 using eCommerce.Infrastructure;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
 builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfiles>());
+builder.Services.AddFluentValidationAutoValidation();
 
 var app = builder.Build();
 app.UseExceptionHandlingMiddleware();
