@@ -23,7 +23,12 @@ namespace eCommerce.Core.Services
                 return null;
             }
 
-            var userResponse = _mapper.Map<AuthenticationResponse>(user);
+            var userResponse = _mapper.Map<AuthenticationResponse>(user) with
+            {
+                Success = true,
+                Token = "dummy-token-for-now",
+            };
+
             return userResponse;
         }
 
